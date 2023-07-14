@@ -5,4 +5,5 @@ LINES TERMINATED BY '\n';
 
 LOAD DATA LOCAL INPATH '/home/ubuntu/movies_new.csv' INTO TABLE movies;
 
-Select MovieName, rating from movies GROUP BY MovieName, rating;
+Select MovieName, AVG(rating) from Movies group by MovieName limit 5;
+
