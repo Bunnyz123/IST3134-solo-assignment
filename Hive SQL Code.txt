@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS movies (UserId int, MovieName string, rating float, Genre string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+
+Select MovieName, rating from movies GROUP BY MovieName, rating;
